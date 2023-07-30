@@ -14,53 +14,90 @@
 
     <div class="container">
         <div class="opcoes">
-            <button id="bold" class="btn-opcao formatacao">
+            <button id="negrito" class="btn-opcao formatacao" title="Negrito">
                 <i class="fa-solid fa-bold"></i>
             </button>
 
-            <button id="superscript" class="btn-opcao formatacao">
+            <button id="sobrescrito" class="btn-opcao formatacao" title="Sobrescrito">
                 <i class="fa-solid fa-superscript"></i>
             </button>
 
-            <button id="subcript" class="btn-opcao formatacao">
+            <button id="subscrito" class="btn-opcao formatacao" title="Subscrito">
                 <i class="fa-solid fa-subscript"></i>
             </button>
 
-            <button id="insertOrderedList" class="btn-opcao formatacao">
+            <button id="inserirlistaOrdenada" class="btn-opcao formatacao" title="Criar lista ordenada">
                 <i class="fa-solid fa-list-ol"></i>
             </button>
 
-            <button id="insertUnorderedList" class="btn-opcao formatacao">
+            <button id="inserirlista" class="btn-opcao formatacao" title="Criar lista">
                 <i class="fa-solid fa-list"></i>
             </button>
 
-            <button id="undo" class="btn-opcao">
+            <button id="desfazer" class="btn-opcao" title="Desfazer">
                 <i class="fa-solid fa-rotate-left"></i>
             </button>
 
-            <button id="redo" class="btn-opcao">
+            <button id="refazer" class="btn-opcao" title="Refazer">
                 <i class="fa-solid fa-rotate-right"></i>
             </button>
 
-            <button id="createLink" class="btn-opcao">
+            <button id="criarLink" class="btn-opcao-avanc" title="Criar link">
                 <i class="fa-solid fa-link"></i>
             </button>
 
-            <button id="unlink" class="btn-opcao formatacao">
+            <button id="remeverLink" class="btn-opcao" title="Remover link">
                 <i class="fa-solid fa-unlink"></i>
             </button>
 
-            <button id="justifyLeft" class="btn-opcao formatacao">
+            <button id="alinharEsquerda" class="btn-opcao alinhamento" title="Alinhar à esquerda">
                 <i class="fa-solid fa-align-left"></i>
             </button>
 
-            <button id="justifyCenter" class="btn-opcao formatacao">
+            <button id="alinharCentro" class="btn-opcao alinhamento" title="Alinhar ao centro">
                 <i class="fa-solid fa-align-center"></i>
             </button>
 
-            <button id="justifyRight" class="btn-opcao formatacao">
+            <button id="alinharDireita" class="btn-opcao alinhamento" title="Alinhar à direita">
                 <i class="fa-solid fa-align-right"></i>
             </button>
+
+            <button id="justificar" class="btn-opcao alinhamento" title="Justificar">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+
+            <button id="identacao" class="btn-opcao espacamento" title="Adicionar identação">
+                <i class="fa-solid fa-indent"></i>
+            </button>
+
+            <button id="removerIdentacao" class="btn-opcao espacamento" title="Remover identação">
+                <i class="fa-solid fa-outdent"></i>
+            </button>
+
+            <select id="blocoFormatacao" class="btn-opcao-avanc">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+            </select>
+
+            <select id="nomeFonte" class="btn-opcao-avanc"></select>
+            <select id="tamanhoFonte" class="btn-opcao-avanc"></select>
+            
+            <div class="opcoes-cores">
+                <input type="color" id="corDaFonte" class="btn-opcao-avanc">
+                <label for="corDaFonte">Cor da Fonte</label>
+            </div>
+
+            <div class="opcoes-cores">
+                <input type="color" id="corDaLinha" class="btn-opcao-avanc">
+                <label for="corDaLinha">Cor da Linha</label>
+            </div>
+
+            <div id="caixa-texto" contenteditable="true"></div>
+
         </div>
     </div>
 

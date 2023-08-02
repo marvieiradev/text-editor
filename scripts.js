@@ -1,10 +1,9 @@
 let btnsOpcoes = document.querySelectorAll(".btn-opcao");
 let btnsOpcoesAvanc = document.querySelectorAll(".btn-opcao-avanc");
-
-let nomeFonte = document.getElementById("nomeFonte");
-let tamFonte = document.getElementById("tamanhoFonte");
+let nomeFonte = document.getElementById("fontName");
+let tamFonte = document.getElementById("fontSize");
 let areaTexto = document.getElementById("caixa-texto");
-let btnLink = document.getElementById("criarLink");
+let btnLink = document.getElementById("createLink");
 let btnsAlinhamento = document.querySelectorAll(".alinhamento");
 let btnsEspaco = document.querySelectorAll(".espacamento");
 let btnsForamatacao = document.querySelectorAll(".formatacao");
@@ -41,21 +40,25 @@ const iniciar = () => {
     }
 
     tamFonte.value = 3;
+    console.log("INICIOU")
 };
 
 const modificarTexto = (comando, uiPadrao, valor) => {
     document.execCommand(comando, uiPadrao, valor);
+    console.log("MODIFICAR")
 };
 
 btnsOpcoes.forEach((button) => {
     button.addEventListener("click", () => {
         modificarTexto(button.id, false, null);
+        console.log("OPCOES")
     });
 });
 
 btnsOpcoesAvanc.forEach((button) => {
     button.addEventListener("change", () => {
         modificarTexto(button.id, false, button.value);
+        console.log("ANAVC")
     });
 });
 

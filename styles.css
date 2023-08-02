@@ -11,15 +11,28 @@ body {
 }
 
 .container {
-    background-color: #FFFFFF;
     width: 90vmin;
-    padding: 50px 30px;
+    padding: 0px;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
     border-radius: 10px;
     box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+    background-color: #FFFFFF;
+}
+
+.container .titulo{
+    background-color: #65ffa0;
+    padding: 5px 0px;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.editor{
+    padding: 5px 30px 50px 30px;
 }
 
 .opcoes {
@@ -65,12 +78,12 @@ input[type="color"] {
     cursor: pointer;
 }
 
-input[type="color"]::webkit-color-swatch {
+input[type="color"]::-webkit-color-swatch {
     border-radius: 15px;
     box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 3px #020929;
 }
 
-input[type="color"]::moz-color-swatch {
+input[type="color"]::-moz-color-swatch {
     border-radius: 15px;
     box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 3px #020929;
 }
@@ -80,6 +93,8 @@ input[type="color"]::moz-color-swatch {
     border: 1px solid #DDDDDD;
     padding: 20px;
     height: 50vh;
+    overflow: scroll;
+    white-space:nowrap;
 }
 
 .ativo{

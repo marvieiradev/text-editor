@@ -10,9 +10,9 @@ let btnsForamatacao = document.querySelectorAll(".formatacao");
 let btnsCodigo = document.querySelectorAll(".codigo");
 
 let listaFontes = [
+    "Times New Roman",
     "Arial",
     "Verdana",
-    "Times New Roman",
     "Garamond",
     "Georgia",
     "Courrier New",
@@ -40,25 +40,21 @@ const iniciar = () => {
     }
 
     tamFonte.value = 3;
-    console.log("INICIOU")
 };
 
 const modificarTexto = (comando, uiPadrao, valor) => {
     document.execCommand(comando, uiPadrao, valor);
-    console.log("MODIFICAR")
 };
 
 btnsOpcoes.forEach((button) => {
     button.addEventListener("click", () => {
         modificarTexto(button.id, false, null);
-        console.log("OPCOES")
     });
 });
 
 btnsOpcoesAvanc.forEach((button) => {
     button.addEventListener("change", () => {
         modificarTexto(button.id, false, button.value);
-        console.log("ANAVC")
     });
 });
 

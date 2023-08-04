@@ -8,6 +8,7 @@ let btnsAlinhamento = document.querySelectorAll(".alinhamento");
 let btnsEspaco = document.querySelectorAll(".espacamento");
 let btnsForamatacao = document.querySelectorAll(".formatacao");
 let btnsCodigo = document.querySelectorAll(".codigo");
+let btnSalvar = document.getElementById("bt-salvar");
 
 let listaFontes = [
     "Times New Roman",
@@ -92,6 +93,36 @@ const removerMarcador = (className) => {
         button.classList.remove("ativo");
     });
 };
+
+function salvarTexto(data, filename, type) {
+    const file = new Blob([data], { type: type });
+
+    if (window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(file, filename);
+        return
+    }
+
+    const a = document.createElement("a");
+    const url = URL.createObjectURL(file);
+
+    a.href = url;
+    a.download = filename;
+
+    document.body.appendChild(a);
+
+    a.click();
+
+    setTimeout(function () {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }, 0);
+}
+
+btnSalvar.addEventListener("click", () => {
+    let arquivo = areaTexto.innerHTML;
+    salvarTexto(arquivo, 'documento1', 'txt');
+});
+
 
 window.onload = iniciar();
 

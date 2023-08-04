@@ -103,14 +103,32 @@ input[type="color"]::-moz-color-swatch {
     white-space: nowrap;
 }
 
-.opcoes-cores{
+.opcoes-cores {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.opcoes-cores label{
-padding: 0 5px;
+.opcoes-cores label {
+    padding: 0 5px;
+}
+
+.btns-arquivo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns-arquivo button {
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 15px;
+    background: #5425ff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 5rem;
 }
 
 .ativo {

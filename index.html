@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <div class="titulo"><span>Documento 1</span></div>
+        <div class="titulo"><span id="titulo">Documento 1</span></div>
         <div class="editor">
             <div class="opcoes">
                 <button id="bold" class="btn-opcao formatacao" title="Negrito">
@@ -100,7 +100,22 @@
             <div id="caixa-texto" contenteditable="true"></div>
         </div>
         <div class="btns-arquivo">
-            <button id="bt-salvar">Salvar</button>
+            <button id="bt-novo">
+                <i class="fa-regular fa-file"></i>
+                Novo
+            </button>
+            <button id="bt-salvar">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Salvar
+            </button>
+
+            <div id="bt-abrir">
+                <label>
+                    <input type="file" onchange="abrirTexto(this.files[0])" id="input-abrir"/>
+                    <i class="fa-regular fa-folder-open"></i>
+                    Abrir
+                </label>
+            </div>
         </div>
     </div>
 

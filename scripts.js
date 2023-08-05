@@ -9,6 +9,10 @@ let btnsEspaco = document.querySelectorAll(".espacamento");
 let btnsForamatacao = document.querySelectorAll(".formatacao");
 let btnsCodigo = document.querySelectorAll(".codigo");
 let btnSalvar = document.getElementById("bt-salvar");
+let btnNovo = document.getElementById("bt-novo");
+let tituloDoc = document.getElementById("titulo");
+let inputAbrir = document.getElementById("input-abrir");
+let nomePadrao = '';
 
 let listaFontes = [
     "Times New Roman",
@@ -118,11 +122,30 @@ function salvarTexto(data, filename, type) {
     }, 0);
 }
 
+async function abrirTexto(arquivo) {
+    let texto = await arquivo.text();
+    areaTexto.insertAdjacentHTML('afterbegin', texto);
+    let nomeArquivo = (inputAbrir.files.item(0).name).replace('.txt', '') 
+    tituloDoc.innerHTML = nomeArquivo;
+    nomePadrao = nomeArquivo; 
+
+}
+
 btnSalvar.addEventListener("click", () => {
     let arquivo = areaTexto.innerHTML;
-    salvarTexto(arquivo, 'documento1', 'txt');
+    let nomeArquivo = areaTexto.innerHTML;
+    if(nomePadrao == ''){
+        nomeArquivo = 'Documento 1';
+    }else{
+        nomeArquivo = nomePadrao;
+    }
+
+    salvarTexto(arquivo, nomeArquivo, 'txt');
 });
 
+btnNovo.addEventListener("click", () => {
+    location.reload();
+});
 
 window.onload = iniciar();
 

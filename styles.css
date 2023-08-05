@@ -38,7 +38,7 @@ body {
 }
 
 .editor {
-    padding: 5px 30px 40px 30px;
+    padding: 5px 30px 5px 30px;
 }
 
 .opcoes {
@@ -98,8 +98,8 @@ input[type="color"]::-moz-color-swatch {
     margin-top: 10px;
     border: 1px solid #DDDDDD;
     padding: 20px;
-    height: 50vh;
-    overflow: scroll;
+    height: 55vh;
+    overflow: auto;
     white-space: nowrap;
 }
 
@@ -119,16 +119,36 @@ input[type="color"]::-moz-color-swatch {
     justify-content: center;
 }
 
-.btns-arquivo button {
+.btns-arquivo button, #bt-abrir {
     color: #fff;
     cursor: pointer;
     margin: 10px;
-    font-size: 15px;
-    background: #5425ff;
+    font-size: 17px;
+    background: #5d30ffd8;
     border-radius: 5px;
     border: none;
     outline: none;
-    width: 5rem;
+    width: 5.5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.btns-arquivo i{
+    padding-right: 5px;
+}
+
+.btns-arquivo input[type='file']{
+    display: none;
+}
+
+.btns-arquivo label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .ativo {

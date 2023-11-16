@@ -6,6 +6,6 @@ Com este editor de texto é possivel formatar, salvar e ler pequenos textos no f
 ## Informações
 Projeto desenvolvido utilizando apenas HTML, CSS e JavaScript.
 
-## Demostração
+## Demonstração
 https://marvieira-text-editor.vercel.app/
 
